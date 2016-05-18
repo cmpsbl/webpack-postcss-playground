@@ -1,15 +1,24 @@
-var webpack = require('webpack');
-// var path = require('path');
+var webpack = require('webpack')
+var path = require('path')
+
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
-  entry: "./src/entry.js",
+  context: path.join(__dirname, 'src'),
+  entry: "entry.js",
   output: {
-    path: __dirname,
-    filename: "./dist/bundle.js",
+    path: path.join(__dirname, 'dist'),
+    filename: "bundle.js"
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: "style!css" },
-    ],
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+      }
+    ]
   },
-};
+  plugins: [
+    new ExtractTextPlugin("bundle.css", { allChunks: true })
+  ]
+}
