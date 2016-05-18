@@ -1,1 +1,1 @@
-require("./entry.css");
+require("./styles/entry.css");
