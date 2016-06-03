@@ -2,3 +2,4 @@ dist
 node_modules
 src/styles
 src/entry.js
+npm-debug.log

@@ -14,7 +14,6 @@ import calc from 'postcss-calc';
 import values from 'postcss-modules-values';
 import nested from 'postcss-nested';
 import modularscale from 'postcss-modular-scale';
-// import verticalrhythmfunction from 'postcss-vertical-rhythm-function';
 import verticalrhythm from 'postcss-vertical-rhythm';
 import functions from 'postcss-functions';
 import customProperties from 'postcss-custom-properties';

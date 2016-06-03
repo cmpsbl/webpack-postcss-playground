@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import CSSModules from 'react-css-modules';
 
-import './styles/entry.css';
+import styles from './styles/entry.css';
 
-const App = () => {
-  return (
-    <div>
-      <section>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </section>
-    </div>
-  );
+@CSSModules(styles)
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <section>
+          <div styleName="col">hahahaha</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </section>
+      </div>
+    );
+  }
 };
 
 ReactDOM.render(<App />, document.querySelector('#app'));
