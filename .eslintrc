@@ -1,10 +1,20 @@
 {
-  extends": "airbnb-base",
+  "parser": "babel-eslint",
+  "extends": "airbnb",
   "rules": {
     "global-require" : "off",
     "no-console"     : "off",
     "new-cap"        : "off",
     "arrow-body-style"  : "off",
     "consistent-return" : "off"
+  },
+  /*Disabled*/
+  /*"settings": {
+    "import/resolver": "webpack"
+  },*/
+  "globals": {
+    "__DEV__"        : false,
+    "__PROD__"       : false,
+    "__CSSMODULES__" : false
   }
 }
